@@ -1,0 +1,139 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ContainSection {
+  flex: 1;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative;
+  overflow: hidden; */
+}
+.right_image {
+  width: 390px;
+  position: relative;
+  overflow: hidden;
+}
+.right_image img{
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: 0px;
+  right: -100px;
+}
+.left_bottom_image {
+  position: relative;
+  overflow: hidden;
+  width: 390px;
+}
+.left_bottom_image img{
+  width: 350px;
+  height: auto;
+  transform: rotate(140deg);
+  position: absolute;
+  left: -185px;
+  bottom: -185px;
+}
+.subtitle{
+  color: #9c9c9c;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 8px;
+}
+.description{
+  color: #9c9c9c;
+  margin: 0;
+  font-size: 16px;
+  padding: 30px 0px;
+  text-align: center;
+}
+.developerTextContent{
+  color: #9c9c9c;
+  margin: 0;
+  font-size: 15px;
+  padding: 30px 0px;
+}
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 28px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.logoContain img{
+width: 120px;
+}
+.linkText{
+  text-decoration: underline;
+  color: #1a73e8;
+  font-weight: 500;
+}
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.getBtn {
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 200px;
+  background-color: #e43e3e;
+  padding: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.aboutBtn{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.aboutBtn span{
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

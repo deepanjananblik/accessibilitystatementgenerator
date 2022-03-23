@@ -1,0 +1,144 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.topSection {
+  height: 80px;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.colorHeadTitle {
+  margin: 0px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.colorHeadSubtitle{
+    margin: 0px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 100;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.mainSection {
+  flex: 1;
+  width: 700px;
+  margin: auto;
+}
+.colorTopSection {
+width: 230px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+}
+.colorTitleSection{
+  width: 200px;
+  border-bottom: 2px solid #000000;
+  margin: 20px 0px 20px 0px;
+  padding: 3px 0px;
+}
+.helpIconView{
+  right: -3px;
+  bottom: 21px;
+  position: absolute;
+}
+.title {
+  margin: 0;
+  text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.primaryColorTextView {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.primaryColorSection{
+  margin-bottom: 20px;
+}
+.analyzeBtnSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.analyzeBtn {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 200px;
+  background-color: #e43e3e;
+  padding: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.colorBox {
+  width: 90px;
+  height: 110px;
+  box-shadow: 0px 0px 2px 0px grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin: 10px 0px;
+}
+.colorBoxItem {
+width: 70px;
+}
+.colorBoxIconSection{
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+}
+.colorText {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+}
+.primaryColorText {
+  font-size: 16px;
+    margin: 0px;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 5px;
+}
+.wcagSection {
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 10px 25px;
+}
+.wcagTitleSection h4{
+  font-size: 16px;
+  margin: 0px;
+  font-weight: 600;
+  color: #000000;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

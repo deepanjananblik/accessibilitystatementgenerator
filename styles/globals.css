@@ -1,0 +1,71 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.summaryView::before{
+  display: none !important;
+}
+.buttonSpan span{
+  display: none;
+}
+.aboutButtonSpan span:nth-last-of-type(1){
+  display: none;
+}
+.basicButton span{
+  display: none;
+}
+.buttonSpan:hover{
+  background-color: #e88282 !important;
+}
+.exportButton span{
+  display: none;
+}
+.exportButton:hover{
+  background-color: #b8e9ef !important;
+}
+/***************ACCESSIBILITY STATEMENT GENERATOR***********/
+.accordionSummaryView{
+  box-shadow: none;
+  border-radius: 10px !important;
+  margin-bottom: 20px;
+}
+.accordionSummaryView:before{
+  height: 0px;
+}
+.modalStyle{
+  position: fixed;
+  z-index: 1300;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalMainView{
+  width: 800px;
+  height: 90%;
+  /* overflow-x: hidden; */
+  background-color: #ffffff;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.inputControl{
+  font-weight: 600;
+  font-size: 15px;
+}
