@@ -42,7 +42,7 @@ import { getRgbaValue } from '@hbis/color';
 
 
 
-export default function statementgeneratorreport() {
+export default function StatementGeneratorReport() {
   const router = useRouter();
   const [isAbout, setisAbout] = useState(false);
   const [expanded, setExpanded] = useState(false);

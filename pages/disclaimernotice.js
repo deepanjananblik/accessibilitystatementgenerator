@@ -7,7 +7,7 @@ import { Container, Grid, Box, Popover, Typography, IconButton, Checkbox, Button
 
 import { useDispatch, useSelector } from "react-redux";
 
-export default function disclaimernotice() {
+export default function DisclaimerNotice() {
 
   const [title, setTitle] = useState('Accessibility statement generator');
 
