@@ -13,14 +13,14 @@ export default function AboutUs(props) {
 
     return (
         <Container
-            sx={{ width: 600 }}
+            className="about_container"
             disableGutters
             role="dialog"
             aria-labelledby="aboutUsHeading"
             aria-describedby="aboutUsContent"
         >
             <Box
-                sx={{ width: '100%', textAlign: 'right', }}
+                className="top_close_btn"
                 role="presentation"
             >
                 <IconButton
@@ -37,31 +37,43 @@ export default function AboutUs(props) {
                 </IconButton>
             </Box>
 
-            <Box sx={{ textAlign: 'center', }}>
-                <img style={{ width: 100, }} src="../media-image.png" alt="NEBULA MEDIA GROUP" />
-                <Typography variant="h6" pt={2} gutterBottom role="heading" aria-level="2">
-                    ACCESSIBLE COLOR PALETTE ANALYZER
-                </Typography>
-                <Typography variant="subtitle2" gutterBottom role="heading" aria-level="3">
-                    COLOR CONTRAST ANALYZER TOOL
-                </Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', }}>
+            <Box
+                className="about_header_content"
+            >
+                <img src="../media-image.png" alt="NEBULA MEDIA GROUP" />
                 <Typography
+                    className="about_header_title"
                     variant="h6"
-                    py={2}
+                    pt={2} gutterBottom
+                    role="heading"
+                    aria-level="2">
+                    ACCESSIBILITY STATEMENT GENERATOR
+                </Typography>
+                <Typography
+                    className="about_header_subtitle"
+                    variant="subtitle2"
                     gutterBottom
-                    id="aboutUsHeading"
-                >
-                    Abous Us
+                    role="heading"
+                    aria-level="3">
+                   Online Statement Generator Tool
                 </Typography>
             </Box>
-            <Box sx={{ paddingLeft: 4, paddingRight: 4, }} id="aboutUsContent">
+            <Typography
+                variant="h6"
+                className="about_text_title"
+                py={2}
+                gutterBottom
+                id="aboutUsHeading"
+            >
+                Abous Us
+            </Typography>
+
+            <Box className='about_content_para' id="aboutUsContent">
                 {renderHTML(aboutUsContent)}
             </Box>
 
-            <Box sx={{ paddingLeft: 4, paddingBottom: 5 }}>
-                <Typography variant="subtitle1" pt={2} gutterBottom component="div">
+            <Box className="about_footer_content">
+                <Typography>
                     CONTACT
                 </Typography>
                 <Link1 href="#" variant="body2" underline="always">

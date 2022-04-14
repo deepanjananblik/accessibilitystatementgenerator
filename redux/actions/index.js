@@ -1,42 +1,155 @@
 import {
-  ADD_PRIMARY_COLOR_REQUEST,
-  REMOVE_PRIMARY_COLOR_REQUEST,
-  ADD_SECONDARY_COLOR_REQUEST,
-  REMOVE_SECONDARY_COLOR_REQUEST,
-  COLOR_CONTRAST_ANALYZE_REQUEST,
-  SELECTED_WCAG_LEVELS_AA,
-  SELECTED_WCAG_LEVELS_AAA,
-  COLOR_CONTRAST_SUGGESTION_REQUEST,
-  APPLY_COLOR_CONTRAST_SUGGESTION,
+  ADD_COMPANY_NAME,
+  ADD_WEBSITE_URL,
+  ADD_DATE,
+  ADD_EXISTING_EFFORTS,
+  ADD_ADDITIONAL_EFFORTS,
+  ONCHANGE_ADD_EXISTING_EFFORTS,
+  REMOVE_EXISTING_EFFORTS,
+  ADD_ACCESSIBILITY_STANDAR,
+  ADD_ACCESSIBILITY_LEVEL,
+  ADD_CURRENT_CONFORMANCE_STATUS,
+  ADD_KNOWN_ACCESSIBILITY_ISSUES,
+  REMOVE_ACCESSIBILITY_ISSUES,
+  ONCHANGE_ADD_ACCESSIBILITY_VIDEO_TITLE,
+  ONCHANGE_ADD_ACCESSIBILITY_DISCRIPTION,
+  ADD_BROWSER,
+  REMOVE_BROWSER,
+  ONCHANGE_ADD_BROWSER,
+  ADD_ASSISTIVE_TECHNOLOGIES,
+  REMOVE_ASSISTIVE_TECHNOLOGIES,
+  ONCHANGE_ADD_ASSISTIVE_TECHNOLOGIES,
+  ADD_EXISTING_TECHNOLOGIES,
+  ADD_ANOTHER_TECHNOLOGIES,
+  REMOVE_ANOTHER_TECHNOLOGIES,
+  ONCHANGE_ADD_TECHNOLOGIES,
+  ADD_EXISTING_ASSESSMENT_METHODS,
+  ADD_ANOTHER_ASSESSMENT_METHODS,
+  REMOVE_ANOTHER_ASSESSMENT_METHODS,
+  ONCHANGE_ADD_ANOTHER_ASSESSMENT_METHODS,
+  ADD_ACCESSIBILITY_EVALUATION_REPORTS,
+  ADD_PHONE_NO,
+  ADD_EMAIL_ADDRESS,
+  ADD_POSTAL_ADDRESS,
+  ADD_RESPONSE_TIME,
+  ADD_FORMAL_COMPLAINTS,
+  ADD_PERSON_NAME,
+  ADD_JOB_TITLE
 } from "../constants/action-types";
 
-export function addPrimaryColor(payload) {
-  return { type: ADD_PRIMARY_COLOR_REQUEST, payload }
+export function addCompanyName(payload) {
+  return { type: ADD_COMPANY_NAME, payload }
 };
 
-export function removePrimaryColor(payload) {
-  return { type: REMOVE_PRIMARY_COLOR_REQUEST, payload }
+export function addWebsiteURL(payload) {
+  return { type: ADD_WEBSITE_URL, payload }
 };
 
-export function addSecondaryColor(payload) {
-  return { type: ADD_SECONDARY_COLOR_REQUEST, payload }
+export function addDate(payload) {
+  return { type: ADD_DATE, payload }
 };
 
-export function removeSecondaryColor(payload) {
-  return { type: REMOVE_SECONDARY_COLOR_REQUEST, payload }
+export function addExistingEfforts(payload) {
+  return { type: ADD_EXISTING_EFFORTS, payload }
 };
-export function colorContrastAnalyze(payload) {
-  return { type: COLOR_CONTRAST_ANALYZE_REQUEST, payload }
+
+export function addAdditionalEfforts(payload) {
+  return { type: ADD_ADDITIONAL_EFFORTS, payload }
 };
-export function selectedWCAGlevelsAa(payload) {
-  return { type: SELECTED_WCAG_LEVELS_AA, payload }
+
+export function onChangeAddExistingEfforts(payload) {
+  return { type: ONCHANGE_ADD_EXISTING_EFFORTS, payload }
 };
-export function selectedWCAGlevelsAaa(payload) {
-  return { type: SELECTED_WCAG_LEVELS_AAA, payload }
+
+export function removeExistingEfforts(payload) {
+  return { type: REMOVE_EXISTING_EFFORTS, payload }
 };
-export function colorContrastSuggestionRequest(payload) {
-  return { type: COLOR_CONTRAST_SUGGESTION_REQUEST, payload }
+export function addAccessibilityStandar(payload) {
+  return { type: ADD_ACCESSIBILITY_STANDAR, payload }
 };
-export function applyColorContrastSuggestion(payload) {
-  return { type: APPLY_COLOR_CONTRAST_SUGGESTION, payload }
+export function addAccessibilityLevel(payload) {
+  return { type: ADD_ACCESSIBILITY_LEVEL, payload }
 };
+export function addConformanceStatus(payload) {
+  return { type: ADD_CURRENT_CONFORMANCE_STATUS, payload }
+};
+export function addAccessibility(payload) {
+  return { type: ADD_KNOWN_ACCESSIBILITY_ISSUES, payload }
+};
+export function removeAccessibility(payload) {
+  return { type: REMOVE_ACCESSIBILITY_ISSUES, payload }
+};
+export function onChangeAddAccessibilityVideoTitle(payload) {
+  return { type: ONCHANGE_ADD_ACCESSIBILITY_VIDEO_TITLE, payload }
+};
+export function onChangeAddAccessibilityDiscription(payload) {
+  return { type: ONCHANGE_ADD_ACCESSIBILITY_DISCRIPTION, payload }
+};
+export function addBrowser(payload) {
+  return { type: ADD_BROWSER, payload }
+};
+export function removeBrowser(payload) {
+  return { type: REMOVE_BROWSER, payload }
+};
+export function onchangeAddBrowser(payload) {
+  return { type: ONCHANGE_ADD_BROWSER, payload }
+};
+export function addAssistiveTechnologies(payload) {
+  return { type: ADD_ASSISTIVE_TECHNOLOGIES, payload }
+};
+export function removeAssistiveTechnologies(payload) {
+  return { type: REMOVE_ASSISTIVE_TECHNOLOGIES, payload }
+};
+export function onchangeAssistiveTechnologies(payload) {
+  return { type: ONCHANGE_ADD_ASSISTIVE_TECHNOLOGIES, payload }
+};
+export function addExistingTechnologies(payload) {
+  return { type: ADD_EXISTING_TECHNOLOGIES, payload }
+};
+export function addAnotherTechnologies(payload) {
+  return { type: ADD_ANOTHER_TECHNOLOGIES, payload }
+};
+export function removeAnotherTechnologies(payload) {
+  return { type: REMOVE_ANOTHER_TECHNOLOGIES, payload }
+};
+export function onChangeAddAnotherTechnologies(payload) {
+  return { type: ONCHANGE_ADD_TECHNOLOGIES, payload }
+};
+export function addExistingAssessmentMethod(payload) {
+  return { type: ADD_EXISTING_ASSESSMENT_METHODS, payload }
+};
+export function addAnotherAssessmentMethod(payload) {
+  return { type: ADD_ANOTHER_ASSESSMENT_METHODS, payload }
+};
+export function removeAnotherAssessmentMethod(payload) {
+  return { type: REMOVE_ANOTHER_ASSESSMENT_METHODS, payload }
+};
+export function onchangeAddAnotherAssessmentMethod(payload) {
+  return { type: ONCHANGE_ADD_ANOTHER_ASSESSMENT_METHODS, payload }
+};
+export function addAccessibilityEvaluationReports(payload) {
+  return { type: ADD_ACCESSIBILITY_EVALUATION_REPORTS, payload }
+};
+export function addPhoneNo(payload) {
+  return { type: ADD_PHONE_NO, payload }
+};
+export function addEmailAddress(payload) {
+  return { type: ADD_EMAIL_ADDRESS, payload }
+};
+export function addPostalAddress(payload) {
+  return { type: ADD_POSTAL_ADDRESS, payload }
+};
+export function addResponseTime(payload) {
+  return { type: ADD_RESPONSE_TIME, payload }
+};
+export function addFormalComplaints(payload) {
+  return { type: ADD_FORMAL_COMPLAINTS, payload }
+};
+export function addPersoneName(payload) {
+  return { type: ADD_PERSON_NAME, payload }
+};
+export function addJobTitle(payload) {
+  return { type: ADD_JOB_TITLE, payload }
+};
+
+

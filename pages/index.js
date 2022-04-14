@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from "next/link"
+import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router';
 import Helmet from 'react-helmet'
 import Link1 from '@mui/material/Link';
@@ -11,6 +12,7 @@ export default function Intro() {
 
   const [isAbout, setisAbout] = useState(false);
   const [title, setTitle] = useState('Accessibility statement generator');
+  const heading = useSelector(state => state.data.heading);
 
   const router = useRouter();
 
@@ -37,125 +39,67 @@ export default function Intro() {
       </Helmet>
       <Container sx={{}} maxWidth="100%" disableGutters role="main">
 
-        <Box sx={{ bgcolor: '#ffffff', height: '100vh' }}>
+        <Box className='main_container'>
 
           <Grid container spacing={0} columns={12}>
 
             <Grid item xs={3}>
 
-              <Box sx={{
-                width: 300,
-                height: '100vh',
-                display: 'flex',
-                alignItems: 'flex-end',
-              }}>
-                <img src="../background-left.png.png" style={{ width: '100%', }} alt="" aria-hidden="true" />
+              <Box className='bottom_left_img'>
+                <img src="../background-left.png.png" alt="" aria-hidden="true" />
               </Box>
             </Grid>
 
             <Grid item xs={6}>
-              <Box
-                sx={{
-                  height: '100vh',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <Box
-                  sx={{
-                    color: '#000000',
-                    fontWeight: '700',
-                    fontSize: 26,
-                    textAlign: 'center',
-                  }}
+
+              <Box className='main_content_section'>
+                <Typography
                   role="heading"
                   aria-level="1"
-                >
-                  ACCESSIBILITY STATEMENT GENERATOR
-                </Box>
+                  className='main_heading_title' >{heading.title}</Typography>
 
-                <Box
-                  sx={{
-                    color: '#5c5858',
-                    fontWeight: '500',
-                    fontSize: 13,
-                    letterSpacing: 8,
-                    pt: 1,
-                    pb: 4,
-                    textAlign: 'center',
-                  }}
+                <Typography
                   role="heading"
                   aria-level="2"
-                >
-                  Online Statement Generator Tool
-                </Box>
-                <Box
-                  sx={{
-                    color: '#5c5858',
-                    fontSize: 15,
-                    pb: 7,
-                    textAlign: 'center',
-                  }}
-                  component="span"
-                >
-                  Take the hassle out of making a statement by quickly and efficiently generating a web accessibility statement for your website. None of the information entered is stored outside of your web browser.
-                </Box>
-                <Box>
-                  <Button
-                    className='buttonSpan'
-                    style={{ width: 200, backgroundColor: '#e43e3e', color: '#fff', padding: 8, fontSize: 14, }}
-                    onClick={onClickGetStartedHandler}
-                    aria-label="Get Started">
-                    Get Started
-                  </Button>
-                </Box>
+                  className='main_heading_subtitle' >{heading.subtitle}</Typography>
 
-                <Box
-                  sx={{
-                    color: '#5c5858',
-                    fontSize: 14,
-                    pt: 4,
-                    pb: 4,
-                    textAlign: 'center',
-                  }}
-                  component="span"
+                <Typography
+                  className='main_heading_dis' >Take the hassle out of making a statement by quickly and efficiently generating a web accessibility statement for your website. None of the information entered is stored outside of your web browser.</Typography>
+
+                <Button
+                  className='start_button'
+                  onClick={onClickGetStartedHandler}
+                  aria-label="Get Started">
+                  Get Started
+                </Button>
+
+                <Typography
                   role="heading"
                   aria-level="3"
+                  className='maintained_by_text'>Developed and Maintained by</Typography>
+
+                <Box className='logo_view'>
+                  <img src="../media-image.png" alt="NEBULA MEDIA GROUP" />
+                </Box>
+
+                <Button
+                  className='about_button'
+                  onClick={aboutusHandlerClick}
+                  startIcon={<InfoIcon style={{ color: "#000000", fontSize: 22, }} />}
+                  aria-pressed={isAbout}
+                  aria-label="about us"
                 >
-                  Developed and Maintained by
-                </Box>
-                <Box>
-                  <img src="../media-image.png" style={{ width: 120, }} alt="NEBULA MEDIA GROUP" />
-                </Box>
-                <Box sx={{
-                  pt: 3,
-                }}>
-                  <Button
-                    className='aboutButtonSpan'
-                    onClick={aboutusHandlerClick}
-                    style={{ color: '#000000', fontSize: 12, }}
-                    startIcon={<InfoIcon style={{ color: "#000000", fontSize: 18, }} />}
-                    aria-pressed={isAbout}
-                    aria-label="about us"
-                  >
-                    About us
-                  </Button>
-                </Box>
+                  About us
+                </Button>
+
 
               </Box>
             </Grid>
 
             <Grid item xs={3}>
-              <Box sx={{
-                width: '100%',
-                pl: 7,
-                height: '100vh',
-                display: 'flex',
-                alignItems: 'flex-end',
-              }}>
-                <img src="../background-right.png" style={{ width: '100%', }} alt="" aria-hidden="true" />
+              <Box
+                className='bottom_right_img'>
+                <img src="../background-right.png" alt="" aria-hidden="true" />
               </Box>
 
             </Grid>
