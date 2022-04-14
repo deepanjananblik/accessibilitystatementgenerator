@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Link from "next/link";
 import Helmet from 'react-helmet'
 import { useRouter } from 'next/router';
@@ -6,18 +6,18 @@ import Header from './components/Header';
 import { Container, Grid, Box, Typography, Button, } from '@mui/material';
 
 
-//import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function DisclaimerNotice() {
 
   const [title, setTitle] = useState('Accessibility statement generator');
-  //const heading = useSelector(state => state.data.heading);
+  const heading = useSelector(state => state.data.heading);
 
 
 
   const router = useRouter();
 
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const onClickAnalyzeHandler = () => {
     router.push('/statementgeneratorreport');
