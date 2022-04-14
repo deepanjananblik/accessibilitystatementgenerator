@@ -6,7 +6,7 @@ import Header from './components/Header';
 import { Container, Grid, Box, Typography, Button, } from '@mui/material';
 
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function DisclaimerNotice() {
 
@@ -17,7 +17,7 @@ export default function DisclaimerNotice() {
 
   const router = useRouter();
 
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   const onClickAnalyzeHandler = () => {
     router.push('/statementgeneratorreport');
