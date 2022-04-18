@@ -374,8 +374,6 @@ export default function StatementGeneratorReport() {
     setPopEl(false);
   };
 
-  //const copiedData = `Accessibility statement - ${companyName ? companyName : 'Org name'}\r\n ${websiteUrl ? "URL:" : ''} ${websiteUrl ? websiteUrl : ''}\r\nOrg name is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards. \r\nEfforts to support accessibility \r\n${companyName ? companyName : 'Org name'}osss takes the following measures to ensure accessibility: \r\n${yourEffortsList.map((item) => ('• ' + item.value + '\n'))}Conformance status\r\nCurrent accessibility standard of the site:WCAG \r\n${accessibilityLevelSite} level ${accessibilityStandard}\r\nCurrent content conformance status:\r\n${currentContent}\r\n${knownAccessibilityIssuesList.map((item) => (item.title + '\r\n'+ 'Despite our best efforts users may experience some issues. This is a description of known accessibility issues. Please contact us if you observe an issue that is not listed.' + item.videotitle + '\r\n' + item.discription))}\r\n`;
-
   let copiedData = `<div style="padding:20px">
       <h2 style="margin:0px;font-size: 24px;font-weight: 600;color: #000000;font-family: sans-serif;">Accessibility statement - ${companyName ? companyName : '{Org name}'}</h2>
       <h5 style="margin:0px;font-size: 16px;font-weight: 600;color: #000000;font-family: sans-serif;padding-bottom:15px;padding-top:10px;display:${websiteUrl ? 'block' : 'none'};">URL: ${websiteUrl}</h5>
@@ -490,7 +488,7 @@ export default function StatementGeneratorReport() {
     });
     var config = {
       method: 'post',
-      url: 'http://settletrip.com/asg/asg_export_to_pdf.php',
+      url: 'https://coswap.com/asg/asg_export_to_pdf.php',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -506,9 +504,7 @@ export default function StatementGeneratorReport() {
       .catch(function (error) {
         console.log(error);
       });
-    // window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf');
-    // setIsPreloaderOn(false);
-    // setPreloaderCaption("Loading...");
+
   }
 
 
@@ -526,7 +522,7 @@ export default function StatementGeneratorReport() {
 
     var config = {
       method: 'post',
-      url: 'http://settletrip.com/asg/asg_export_to_pdf.php',
+      url: 'https://coswap.com/asg/asg_export_to_pdf.php',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -1961,7 +1957,7 @@ export default function StatementGeneratorReport() {
               <Typography id="statement">STATEMENT IN FULL PREVIEW MODE</Typography>
             </Box>
 
-            <Box className='preview_modal_content_section' id="unstyled-modal-description">
+            <Box className='preview_modal_content_section' id="unstyled-modal-description" role="main">
               <Typography className='accessibility_statement_title'>Accessibility statement - {companyName ? companyName : <span>Org name</span>}</Typography>
 
               {websiteUrl ?
