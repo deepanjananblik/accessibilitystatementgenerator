@@ -43,39 +43,39 @@ a {
 
 .main_heading_title {
   color: #000000;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-  font-size: 32px;
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
   text-align: center;
 }
 
 .main_heading_subtitle {
   color: #5c5858;
-  font-size: 15px;
-  letter-spacing: 8px;
-  padding-bottom: 25px;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 15px !important;
+  letter-spacing: 8px !important;
+  padding-bottom: 25px;
+  font-weight: 400 !important;
 }
 
 .main_heading_dis {
   color: #5c5858;
-  font-size: 14px;
+  font-size: 14px !important;
   padding-bottom: 40px;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif !important;
   font-weight: 100;
 }
 
 .start_button {
   width: 200px;
-  background-color: #e43e3e;
-  color: #ffffff;
-  padding: 8px;
-  font-size: 14px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
+  background-color: #e43e3e !important;
+  color: #fff !important;
+  padding: 8px !important;
+  font-size: 14px !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .start_button span {
@@ -88,11 +88,11 @@ a {
 
 .maintained_by_text {
   color: #5c5858;
-  font-size: 12px;
+  font-size: 12px !important;
   padding: 30px 0px;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 100;
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: 100 !important;
 }
 
 .logo_view img {
@@ -100,11 +100,11 @@ a {
 }
 
 .about_button {
-  color: #000000;
-  font-size: 12px;
-  margin-top: 25px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
+  color: #000000 !important;
+  font-size: 12px !important;
+  margin-top: 25px !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: 500 !important;
 }
 
 .about_button span:nth-last-of-type(1) {
@@ -422,12 +422,14 @@ a {
   position: relative;
   padding-top: 50px;
 }
-.about_content_overlay{
+
+.about_content_overlay {
   position: absolute;
   top: 10px;
   right: 10px;
   z-index: 99;
 }
+
 .hidden_modal {
   position: absolute;
   width: 100%;
@@ -560,39 +562,45 @@ a {
   min-width: 0px;
   border-radius: 20px;
 }
-.remove_btn:hover{
+
+.remove_btn:hover {
   background-color: #e88282 !important;
 }
+
 /******************left_panel*****************/
-.basic_information_left_panel p{
+.basic_information_left_panel p {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #000000;
   padding-bottom: 10px;
 }
-.your_effect_left_panel p{
+
+.your_effect_left_panel p {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #000000;
   padding-bottom: 10px;
 }
-.conformance_statust_left_panel p{
+
+.conformance_statust_left_panel p {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #000000;
   padding-bottom: 10px;
 }
-.technical_specifications_left_panel p{
+
+.technical_specifications_left_panel p {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #000000;
   padding-bottom: 10px;
 }
-.left_panel_title_heading{
+
+.left_panel_title_heading {
   font-family: 'Rubik', sans-serif !important;
   font-weight: 600 !important;
   font-size: 16px !important;
@@ -600,20 +608,23 @@ a {
   padding-bottom: 10px !important;
   padding-top: 10px;
 }
-.assessment_method_left_panel p{
+
+.assessment_method_left_panel p {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #000000;
   padding-bottom: 10px;
 }
-.feedback_left_panel p{
+
+.feedback_left_panel p {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #000000;
   padding-bottom: 10px;
 }
+
 /**********************Modal-section***************/
 .modal_main_view {
   width: 1000px;
@@ -658,116 +669,133 @@ a {
   padding-left: 25px;
   padding-right: 16px;
 }
-.accessibility_statement_title{
+
+.accessibility_statement_title {
   font-size: 20px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
   color: #000000;
 }
-.accessibility_statement_url{
+
+.accessibility_statement_url {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
   color: #000000;
   padding-bottom: 10px;
 }
-.accessibility_statement_subtitle{
+
+.accessibility_statement_subtitle {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   color: #000000;
   padding-bottom: 15px;
 }
-.efforts_title{
+
+.efforts_title {
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
   color: #000000;
   padding-top: 10px;
 }
-.efforts_subtitle{
+
+.efforts_subtitle {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   color: #000000;
   padding: 10px 0px;
 }
-.efforts_list_item{
+
+.efforts_list_item {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   color: #000000;
   padding: 5px 0px;
 }
-.conformance_status_title{
-  font-size: 18px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 600;
-  color: #000000;
- padding-top: 15px;
-}
-.conformance_status_subtitle{
-  font-size: 15px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  color: #000000;
-  padding: 10px 0px;
-}
-.conformance_status_WCAG{
-  font-size: 15px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-  color: #000000;
-}
-.current_conformance_status_title{
-  font-size: 18px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 600;
-  color: #000000;
- padding-top: 15px;
-}
-.current_conformance_status_subtitle{
-  font-size: 15px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  color: #000000;
-  padding: 10px 0px;
-}
-.known_accessibility_issues_title{
+
+.conformance_status_title {
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
   color: #000000;
   padding-top: 15px;
 }
-.known_accessibility_issues_subtitle{
+
+.conformance_status_subtitle {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   color: #000000;
   padding: 10px 0px;
 }
-.known_accessibility_Vtitle{
+
+.conformance_status_WCAG {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   color: #000000;
 }
-.known_accessibility_discription{
+
+.current_conformance_status_title {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  padding-top: 15px;
+}
+
+.current_conformance_status_subtitle {
+  font-size: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  padding: 10px 0px;
+}
+
+.known_accessibility_issues_title {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  padding-top: 15px;
+}
+
+.known_accessibility_issues_subtitle {
+  font-size: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  padding: 10px 0px;
+}
+
+.known_accessibility_Vtitle {
+  font-size: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+.known_accessibility_discription {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   color: #000000;
   padding-bottom: 10px;
 }
-.compatibility_browser_title{
+
+.compatibility_browser_title {
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
   color: #000000;
   padding-top: 15px;
 }
-.compatibility_browser_subtitle{
+
+.compatibility_browser_subtitle {
   font-size: 15px;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -781,8 +809,9 @@ a {
   justify-content: center;
   margin-top: 25px;
 }
+
 /* ********************google-modal************ */
-.googleModelStyle{
+.googleModelStyle {
   position: absolute;
   top: 50%;
   left: 50%;
