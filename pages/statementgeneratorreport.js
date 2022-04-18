@@ -82,7 +82,7 @@ export default function StatementGeneratorReport() {
   const [expanded, setExpanded] = useState(false);
   const [isOver, setIsOver] = useState(false);
   const [modal, setModal] = useState(false);
-  const [popEl, setPopEl] = useState(null);
+  const [popEl, setPopEl] = useState(false);
   const openPop = Boolean(popEl);
   const idpop = openPop ? 'simple-popover' : undefined;
   const ariaLabel = { 'aria-label': 'description' };
@@ -726,7 +726,7 @@ export default function StatementGeneratorReport() {
                           <Box
                             className='accordion_summary_head_section'>
 
-                            <IconButton
+                            {/* <IconButton
                               id="plusIcon1"
                               className='exportButton'
                               aria-label="plus Icon button one"
@@ -737,9 +737,15 @@ export default function StatementGeneratorReport() {
                                 :
                                 <AddIcon fontSize={'large'} sx={{ color: '#000000' }} />
                               }
-                            </IconButton>
+                            </IconButton> */}
 
-
+                            <Box className='exportButton'>
+                              {expanded === 'panel1' ?
+                                <RemoveIcon fontSize={'large'} sx={{ color: '#000000' }} />
+                                :
+                                <AddIcon fontSize={'large'} sx={{ color: '#000000' }} />
+                              }
+                            </Box>
 
                             <Box className='summary_main_title_section'>
 
@@ -747,9 +753,23 @@ export default function StatementGeneratorReport() {
                                 className='summary_title_content'>
 
                                 <Typography className='summary_title_text'>Basic information</Typography>
-                                <IconButton className='basicButton' color="primary" aria-label="Basic-information" size="small" onClick={infoHandle}>
+                                {/* <IconButton
+                                  id="Basic-information"
+                                  className='basicButton'
+                                  color="primary"
+                                  component="span"
+                                  aria-label="Basic-informationaa"
+                                  aria-describedby={popEl}
+                                  size="small" 
+                                  onClick={infoHandle}>
                                   <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
-                                </IconButton>
+                                </IconButton> */}
+                                <Box
+                                  className='info_icon_section'
+                                  onClick={infoHandle}
+                                >
+                                  <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
+                                </Box>
                               </Box>
                               {companyName && websiteUrl ?
                                 <></>
@@ -842,27 +862,27 @@ export default function StatementGeneratorReport() {
 
                           <Box className='accordion_summary_head_section'>
 
-                            <IconButton
-                              id="plusIcon2"
-                              className='exportButton'
-                              aria-label="plus Icon button two"
-                              size="small"
-                            >
+
+                            <Box className='exportButton'>
                               {expanded === 'panel2' ?
                                 <RemoveIcon fontSize={'large'} sx={{ color: '#000000' }} />
                                 :
                                 <AddIcon fontSize={'large'} sx={{ color: '#000000' }} />
                               }
-                            </IconButton>
+                            </Box>
 
                             <Box className='summary_main_title_section'>
 
                               <Box className='summary_title_content'>
 
                                 <Typography className='summary_title_text'>Your Efforts</Typography>
-                                <IconButton color="primary" aria-label={'Organizational-Measures'} size="small" onClick={infoHandle}>
+
+                                <Box
+                                  className='info_icon_section'
+                                  onClick={infoHandle}
+                                >
                                   <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
-                                </IconButton>
+                                </Box>
                               </Box>
                               {yourEffortsList.length == 0 ?
                                 <Typography className='summary_required_text'><span>*</span> Required field</Typography>
@@ -947,27 +967,25 @@ export default function StatementGeneratorReport() {
 
                           <Box className='accordion_summary_head_section'>
 
-                            <IconButton
-                              id="plusIcon3"
-                              className='exportButton'
-                              aria-label="plus Icon button three"
-                              size="small"
-                            >
+                            <Box className='exportButton'>
                               {expanded === 'panel3' ?
                                 <RemoveIcon fontSize={'large'} sx={{ color: '#000000' }} />
                                 :
                                 <AddIcon fontSize={'large'} sx={{ color: '#000000' }} />
                               }
-                            </IconButton>
+                            </Box>
 
                             <Box className='summary_main_title_section'>
 
                               <Box className='summary_title_content'>
 
                                 <Typography className='summary_title_text'>Conformance Status</Typography>
-                                <IconButton className='basicButton' color="primary" aria-label={'Organizational-Measures'} size="small" onClick={infoHandle}>
+                                <Box
+                                  className='info_icon_section'
+                                  onClick={infoHandle}
+                                >
                                   <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
-                                </IconButton>
+                                </Box>
                               </Box>
                               {accessibilityStandard == '' ?
                                 <Typography className='summary_required_text'><span>*</span> Required field</Typography>
@@ -1123,27 +1141,25 @@ export default function StatementGeneratorReport() {
 
                           <Box className='accordion_summary_head_section'>
 
-                            <IconButton
-                              id="plusIcon4"
-                              className='exportButton'
-                              aria-label="plus Icon button four"
-                              size="small"
-                            >
+                            <Box className='exportButton'>
                               {expanded === 'panel4' ?
                                 <RemoveIcon fontSize={'large'} sx={{ color: '#000000' }} />
                                 :
                                 <AddIcon fontSize={'large'} sx={{ color: '#000000' }} />
                               }
-                            </IconButton>
+                            </Box>
 
                             <Box className='summary_main_title_section'>
 
                               <Box className='summary_title_content'>
 
                                 <Typography className='summary_title_text'>Technical Specifications</Typography>
-                                <IconButton className='basicButton' color="primary" aria-label={'Organizational-Measures'} size="small" onClick={infoHandle}>
+                                <Box
+                                  className='info_icon_section'
+                                  onClick={infoHandle}
+                                >
                                   <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
-                                </IconButton>
+                                </Box>
                               </Box>
 
                               {browsersList[0].value == "" && assistiveTechnologiesList[0].value == "" && technologiesList.length == 0 ?
@@ -1330,27 +1346,25 @@ export default function StatementGeneratorReport() {
 
                           <Box className='accordion_summary_head_section'>
 
-                            <IconButton
-                              id="plusIcon5"
-                              className='exportButton'
-                              aria-label="plus Icon button five"
-                              size="small"
-                            >
+                            <Box className='exportButton'>
                               {expanded === 'panel5' ?
                                 <RemoveIcon fontSize={'large'} sx={{ color: '#000000' }} />
                                 :
                                 <AddIcon fontSize={'large'} sx={{ color: '#000000' }} />
                               }
-                            </IconButton>
+                            </Box>
 
                             <Box className='summary_main_title_section'>
 
                               <Box className='summary_title_content'>
 
                                 <Typography className='summary_title_text'>Assessment methods</Typography>
-                                <IconButton color="primary" aria-label={'Organizational-Measures'} size="small" onClick={infoHandle}>
+                                <Box
+                                  className='info_icon_section'
+                                  onClick={infoHandle}
+                                >
                                   <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
-                                </IconButton>
+                                </Box>
                               </Box>
                               {assessmentList.length == 0 && assessmentRecentReport.length == 0 ?
                                 <Typography className='summary_required_text'><span>*</span> Required field</Typography>
@@ -1461,27 +1475,25 @@ export default function StatementGeneratorReport() {
 
                           <Box className='accordion_summary_head_section'>
 
-                            <IconButton
-                              id="plusIcon6"
-                              className='exportButton'
-                              aria-label="plus Icon button five"
-                              size="small"
-                            >
+                            <Box className='exportButton'>
                               {expanded === 'panel6' ?
                                 <RemoveIcon fontSize={'large'} sx={{ color: '#000000' }} />
                                 :
                                 <AddIcon fontSize={'large'} sx={{ color: '#000000' }} />
                               }
-                            </IconButton>
+                            </Box>
 
                             <Box className='summary_main_title_section'>
 
                               <Box className='summary_title_content'>
 
                                 <Typography className='summary_title_text'>Feedback process</Typography>
-                                <IconButton color="primary" aria-label={'Organizational-Measures'} size="small" onClick={infoHandle}>
+                                <Box
+                                  className='info_icon_section'
+                                  onClick={infoHandle}
+                                >
                                   <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
-                                </IconButton>
+                                </Box>
                               </Box>
 
                               {phoneNo || email || postal || responseTime || complaintsName || personName || jobTitle ?
@@ -1849,7 +1861,8 @@ export default function StatementGeneratorReport() {
 
         <Modal
           className="modalStyle"
-          aria-labelledby="unstyled-modal-title"
+          role="dialog"
+          aria-labelledby="statement"
           aria-describedby="unstyled-modal-description"
           open={modal}
           onClose={handleCloseModal}
@@ -1859,7 +1872,7 @@ export default function StatementGeneratorReport() {
 
             <Box
               className='preview_modal_section'
-              role="presentation"
+            //role="presentation"
             >
               {/* <Box
                 className='preview_modal_header'>
@@ -1945,10 +1958,10 @@ export default function StatementGeneratorReport() {
             </Box>
 
             <Box className='preview_modal_header_title'>
-              <Typography>STATEMENT IN FULL PREVIEW MODE</Typography>
+              <Typography id="statement">STATEMENT IN FULL PREVIEW MODE</Typography>
             </Box>
 
-            <Box className='preview_modal_content_section'>
+            <Box className='preview_modal_content_section' id="unstyled-modal-description">
               <Typography className='accessibility_statement_title'>Accessibility statement - {companyName ? companyName : <span>Org name</span>}</Typography>
 
               {websiteUrl ?

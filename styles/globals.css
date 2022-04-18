@@ -485,6 +485,15 @@ a {
   font-size: 10px !important;
   font-family: 'Rubik', sans-serif !important;
   font-weight: 400 !important;
+  border-radius: 50px !important;
+}
+.info_icon_section{
+  padding: 4px 4px 0px 4px;
+  border-radius: 35px;
+  margin-top: 3px;
+}
+.info_icon_section:hover{
+  background-color: #b8e9ef;
 }
 
 .about_us_button {
@@ -530,9 +539,9 @@ a {
 }
 
 .addEffortsBtn {
-  background-color: #e43e3e;
-  color: #ffffff;
-  margin: 20px 0px;
+  background-color: #e43e3e !important;
+  color: #ffffff !important;
+  margin: 20px 0px !important;
   font-family: 'Rubik', sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;
