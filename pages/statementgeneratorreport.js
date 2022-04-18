@@ -80,7 +80,7 @@ import Preloader from './components/Preloader';
 export default function StatementGeneratorReport() {
   const [isAbout, setisAbout] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const [isOver, setIsOver] = useState(true);
+  const [isOver, setIsOver] = useState(false);
   const [modal, setModal] = useState(false);
   const [popEl, setPopEl] = useState(null);
   const openPop = Boolean(popEl);
@@ -359,7 +359,7 @@ export default function StatementGeneratorReport() {
   );
   const accordionHandleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
-    setIsOver(false);
+    // setIsOver(true);
   };
 
   const handleCloseModal = () => setModal(false);
@@ -394,12 +394,12 @@ export default function StatementGeneratorReport() {
       <p style="font-size: 14px;color: #000000;font-family: sans-serif;padding:10px 0px;display:${accessibilityLevelSite || accessibilityStandard ? 'block' : 'none'};">WWCAG ${accessibilityLevelSite ? accessibilityLevelSite : 'undefined'} level ${accessibilityStandard ? accessibilityStandard : 'undefined'}</p>
       <h3 style="margin:0px;font-size: 20px;font-weight: 600;color: #000000;font-family: sans-serif;padding-top:10px;display:${currentContent ? 'block' : 'none'};">Conformance status</h3>
       <p style="font-size: 14px;color: #000000;font-family: sans-serif;padding:10px 0px;display:${currentContent ? 'block' : 'none'};">${currentContent}</p>`;
-  
-    knownAccessibilityIssuesList[0].videotitle != "" || knownAccessibilityIssuesList[0].discription != "" ?
+
+  knownAccessibilityIssuesList[0].videotitle != "" || knownAccessibilityIssuesList[0].discription != "" ?
     copiedData += `<h3 style="margin:0px;font-size: 20px;font-weight: 600;color: #000000;font-family: sans-serif;padding-top:10px">Known accessibility issues</h3>
           <p style="font-size: 14px;color: #000000;font-family: sans-serif;padding:10px 0px">Despite our best efforts users may experience some issues. This is a description of known accessibility issues. Please contact us if you observe an issue that is not listed.</p>`
     : null
-  
+
   knownAccessibilityIssuesList.map((item, index) => (
     copiedData += `
           <p style="font-size: 14px;color: #000000;font-family: sans-serif;padding:10px 0px">${item.videotitle}:</p>
@@ -1352,7 +1352,7 @@ export default function StatementGeneratorReport() {
                                   <HelpIcon style={{ color: "#ababab", fontSize: 20, }} />
                                 </IconButton>
                               </Box>
-                              {assessmentList.length == 0 || assessmentRecentReport.length > 0 ?
+                              {assessmentList.length == 0 && assessmentRecentReport.length == 0 ?
                                 <Typography className='summary_required_text'><span>*</span> Required field</Typography>
                                 : null}
                             </Box>
@@ -1484,7 +1484,7 @@ export default function StatementGeneratorReport() {
                                 </IconButton>
                               </Box>
 
-                              {phoneNo && email && postal && responseTime && complaintsName && personName && jobTitle ?
+                              {phoneNo || email || postal || responseTime || complaintsName || personName || jobTitle ?
                                 <></>
                                 : <Typography className='summary_required_text'><span>*</span> Required field</Typography>}
                             </Box>
@@ -1648,80 +1648,11 @@ export default function StatementGeneratorReport() {
 
                 <Box className='statement_generator_right_container'>
 
-                  {isOver ?
+                  {/* {isOver ?
                     <Box
                       className='hidden_modal' />
-                    : null}
+                    : null} */}
 
-
-
-                  {/* <Box className="top_button_menu_content">
-
-                    <Box
-                      className="top_button_menu">
-
-                      <IconButton
-                        id="Clipboard"
-                        className='clipboard_button exportButton'
-                        aria-label="Copy to clipboard button"
-                        component="span" size="small"
-                      //onClick={ExportEXCEL}
-                      >
-                        <ContentCopyIcon style={{ color: "#000000", fontSize: 20, }} />
-                        COPY TO CLIPBOARD
-                      </IconButton>
-
-
-
-                      <Box
-                        className='clipboard_right_bar' />
-
-
-
-                      <IconButton
-                        id="PDF-Export"
-                        className='exportButton'
-                        aria-label="PDF Export button"
-                        component="span" size="small"
-                      //onClick={ExportPDF}
-
-                      >
-                        <PictureAsPdfIcon style={{ color: "#000000", fontSize: 20, }} />
-                        PDF EXPORT
-                      </IconButton>
-
-
-                      <IconButton
-                        id="share-drive"
-                        className='exportButton'
-                        aria-label="share-drive button"
-                        //aria-pressed={shereOpen}
-                        component="span"
-                        size="small"
-                      //onClick={handleShareOpen}
-                      >
-                        <AddToDriveIcon style={{ color: "#000000", fontSize: 20, }} />
-                        SHARE IN DRIVE
-                      </IconButton>
-
-                      <IconButton
-                        id="about-us"
-                        className='exportButton about_us_button'
-                        aria-label="about us button"
-                        aria-pressed={isAbout}
-                        component="span"
-                        size="small"
-                        onClick={aboutusHandlerClick}
-                      >
-                        <InfoIcon style={{ color: "#000000", fontSize: 20, }} />
-                        ABOUT US
-                      </IconButton>
-
-
-
-                    </Box>
-
-                  </Box> */}
 
                   <Box className='about_content_overlay'>
                     <IconButton
@@ -1761,14 +1692,14 @@ export default function StatementGeneratorReport() {
                       <>
 
                         {yourEffortsList.length > 0 ?
-                      
+
                           <Box className='your_effect_left_panel'>
                             <ChangeHighlight><Typography className='left_panel_title_heading' ref={createRef()}>{organizational_items_heading}</Typography></ChangeHighlight>
                             {yourEffortsList.map((item, index) => {
                               return <ChangeHighlight key={index}><Typography><span ref={createRef()}>• {item.value}</span></Typography></ChangeHighlight>
                             })}
-</Box>
-                          
+                          </Box>
+
                           :
                           <Box className="empty_content">
                             <img src="../empty.png" alt="" aria-hidden="true" />
@@ -1794,7 +1725,7 @@ export default function StatementGeneratorReport() {
                               })}
                             </>
                             : null}
-                   
+
                         </Box>
                       </Box>
                       : null}
@@ -1868,22 +1799,30 @@ export default function StatementGeneratorReport() {
                         <ChangeHighlight><Typography>Name of person or department responsible for approving this statement:<span ref={createRef()}> {personName ? personName : <>_______</>}</span></Typography></ChangeHighlight>
                         <ChangeHighlight><Typography>Job title: <span ref={createRef()}> {jobTitle ? jobTitle : <>_______</>}</span></Typography></ChangeHighlight>
 
-
-
                       </Box>
                       : null}
 
                   </Box>
 
+
                   <Box className="report_footer_section">
-                   
-                    <Button
-                      className='start_button'
-                      onClick={handleOpenModal}
-                    >
-                      FULL PREVIEW
-                    </Button>
-                    <Typography>Too read full statement click here</Typography>
+                    <Typography>To read full statement click here</Typography>
+                    {companyName || websiteUrl || date || yourEffortsList.length > 0 && yourEffortsList[0].value != '' || accessibilityStandard || accessibilityLevelSite || currentContent || knownAccessibilityIssuesList[0].videotitle != '' || knownAccessibilityIssuesList[0].discription != '' || browsersList[0].value != '' || assistiveTechnologiesList[0].value != '' || technologiesList.length > 0 && technologiesList[0].value != '' || assessmentList.length > 0 && assessmentList[0].value != '' || assessmentRecentReport || phoneNo || email || postal || responseTime || personName || jobTitle ?
+                      <Button
+                        className='start_button'
+                        onClick={handleOpenModal}
+                      >
+                        FULL PREVIEW
+                      </Button>
+                      :
+                      <Button
+                        disabled
+                        className='start_button button_disable'
+                        onClick={handleOpenModal}
+                      >
+                        FULL PREVIEW
+                      </Button>
+                    }
                   </Box>
 
                 </Box>
@@ -2011,10 +1950,12 @@ export default function StatementGeneratorReport() {
 
             <Box className='preview_modal_content_section'>
               <Typography className='accessibility_statement_title'>Accessibility statement - {companyName ? companyName : <span>Org name</span>}</Typography>
+
               {websiteUrl ?
                 <Typography className='accessibility_statement_url'>URL: <Link>{websiteUrl}</Link></Typography>
                 : null}
               <Typography className='accessibility_statement_subtitle'>{companyName ? companyName : <span>Org name</span>} is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</Typography>
+
               {yourEffortsList.length > 0 ?
                 <>
                   <Typography className='efforts_title'>Efforts to support accessibility</Typography>
@@ -2048,8 +1989,12 @@ export default function StatementGeneratorReport() {
 
               {knownAccessibilityIssuesList.map((item, index) => (
                 <>
-                  <Typography className='known_accessibility_Vtitle'>{item.videotitle}:</Typography>
-                  <Typography className='known_accessibility_discription'>{item.discription}</Typography>
+                  {item.videotitle ?
+                    <Typography className='known_accessibility_Vtitle'>{item.videotitle}:</Typography>
+                    : null}
+                  {item.discription ?
+                    <Typography className='known_accessibility_discription'>{item.discription}</Typography>
+                    : null}
                 </>
 
               ))}
@@ -2097,18 +2042,23 @@ export default function StatementGeneratorReport() {
                     <Typography className='compatibility_browser_subtitle'>{assessmentRecentReport}</Typography> : null}
                 </>
                 : null}
+
               {phoneNo.length > 0 || email.length > 0 || postal.length > 0 || responseTime.length > 0 ?
                 <Typography className='compatibility_browser_title'>Feedback process</Typography>
                 : null}
+
               {phoneNo.length > 0 ?
                 <Typography className='efforts_list_item'>• Phone: {phoneNo}</Typography>
                 : null}
+
               {email.length > 0 ?
                 <Typography className='efforts_list_item'>• E-mail: {email}</Typography>
                 : null}
+
               {postal.length > 0 ?
                 <Typography className='efforts_list_item'>• Postal Address: {postal}</Typography>
                 : null}
+
               {responseTime.length > 0 ?
                 <Typography className='compatibility_browser_subtitle'>We aim to respond to feedback within {responseTime}.</Typography>
                 : null}
@@ -2124,26 +2074,21 @@ export default function StatementGeneratorReport() {
                 <>
                   <Typography className='compatibility_browser_title'>Formal approval of this accessibility statement</Typography>
                   <Typography className='compatibility_browser_subtitle'>This accessibility statement is approved by:</Typography>
+
                   {companyName.length > 0 ?
                     <Typography className='efforts_list_item'>{companyName ? companyName : <span>Org name</span>}</Typography>
                     : null}
+
                   {personName.length > 0 ?
                     <Typography className='efforts_list_item'>{personName}</Typography>
                     : null}
+
                   {jobTitle.length > 0 ?
                     <Typography className='efforts_list_item'>{jobTitle}</Typography>
                     : null}
                 </>
                 : null}
-              {/* <Box
-                className='preview_modal_footer_view'>
-                <Button
-                  className='start_button'
-                //onClick={onClickAnalyzeHandler} 
-                >
-                  COPY TO CLIPBOARD
-                </Button>
-              </Box> */}
+
 
 
 
