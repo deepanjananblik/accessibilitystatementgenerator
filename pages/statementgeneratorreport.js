@@ -22,6 +22,7 @@ import {
   RadioGroup,
   Radio,
   Link,
+  Snackbar
 } from '@mui/material';
 
 import AddIcon from '@mui/icons-material/Add';
@@ -83,6 +84,7 @@ export default function StatementGeneratorReport() {
   const [isOver, setIsOver] = useState(false);
   const [modal, setModal] = useState(false);
   const [popEl, setPopEl] = useState(false);
+  const [open, setOpen] = useState(false);
   const openPop = Boolean(popEl);
   const idpop = openPop ? 'simple-popover' : undefined;
   const ariaLabel = { 'aria-label': 'description' };
@@ -611,6 +613,7 @@ export default function StatementGeneratorReport() {
 
   const onCopyHandler = () => {
     setCopied(true);
+    setOpen(true);
   }
 
   const handleShareClose = () => {
@@ -687,6 +690,9 @@ export default function StatementGeneratorReport() {
     setIsGoogleDriveExportOptionClicked(false);
     console.log("ACCESS TOKEN ERROR : " + JSON.stringify(error));
   }
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <>
@@ -2114,6 +2120,14 @@ export default function StatementGeneratorReport() {
                   COPY TO CLIPBOARD
                 </Button>
               </CopyToClipboard>
+              <Snackbar
+                anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                open={open}
+                autoHideDuration={1000}
+                onClose={handleClose}
+                message="Copied"
+                className='copied-text'
+              />
             </Box>
 
           </Box>

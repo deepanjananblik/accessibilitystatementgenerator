@@ -832,3 +832,7 @@ a {
   box-shadow: 1px 1px 1px 3px gray;
   padding: 15px;
 }
+.copied-text div{
+  background-color: #ffffff;
+  color: #000000;
+}
