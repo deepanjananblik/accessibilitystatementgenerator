@@ -2171,8 +2171,8 @@ export default function StatementGeneratorReport() {
               justifyContent: 'center',
             }}>
               <GoogleLogin
-                clientId="978719022448-hqtr18jvf6685ilmip2cm18id45o8i02.apps.googleusercontent.com"
-                //clientId="471472160602-nfj2c45sdse07b58dtl5gauknohtmvov.apps.googleusercontent.com"
+                //clientId="978719022448-hqtr18jvf6685ilmip2cm18id45o8i02.apps.googleusercontent.com"
+                clientId="471472160602-nfj2c45sdse07b58dtl5gauknohtmvov.apps.googleusercontent.com"
                 buttonText="Signin"
                 onSuccess={onSuccessResponseFromGoogle}
                 onFailure={onFailureResponseFromGoogle}
