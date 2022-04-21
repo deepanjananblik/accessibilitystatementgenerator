@@ -377,7 +377,7 @@ export default function StatementGeneratorReport() {
   };
 
   let copiedData = `<div style="padding:20px">
-      <h2 style="margin:0px;font-size: 24px;font-weight: 600;color: #000000;font-family: sans-serif;text-transform:capitalize;">Accessibility statement[${companyName ? companyName : 'Org name'}]</h2>
+      <h2 style="margin:0px;font-size: 24px;font-weight: 600;color: #000000;font-family: sans-serif;text-transform:capitalize;">[${companyName ? companyName : 'company name'}] Accessibility statement</h2>
       <h5 style="margin:0px;font-size: 16px;font-weight: 600;color: #000000;font-family: sans-serif;padding-bottom:15px;padding-top:10px;display:${websiteUrl ? 'block' : 'none'};">URL: ${websiteUrl}</h5>
       <p style="margin:0px;font-size: 14px;color: #000000;font-family: sans-serif;padding-bottom:15px;padding-top:5px;">${companyName ? companyName : '{Org name}'} is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
       <h3 style="margin:0px;font-size: 20px;font-weight: 600;color: #000000;font-family: sans-serif;padding-top:10px;display:${yourEffortsList.length > 0 ? 'block' : 'none'};">Efforts to support accessibility</h3>
@@ -1966,7 +1966,7 @@ export default function StatementGeneratorReport() {
             </Box>
 
             <Box className='preview_modal_content_section' id="unstyled-modal-description" role="main">
-              <Typography className='accessibility_statement_title'>Accessibility statement [{companyName ? companyName : <span>Org name</span>}]</Typography>
+              <Typography className='accessibility_statement_title'>[{companyName ? companyName : <span>company name</span>}] Accessibility statement</Typography>
 
               {websiteUrl ?
                 <Typography className='accessibility_statement_url'>URL: <Link>{websiteUrl}</Link></Typography>
