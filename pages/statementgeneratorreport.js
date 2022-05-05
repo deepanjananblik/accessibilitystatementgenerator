@@ -438,10 +438,10 @@ export default function StatementGeneratorReport() {
   technologiesList.map((item, index) => (
     copiedData += `<li style="font-size: 14px;color: #000000;font-family: sans-serif;padding:1px 0px">${item.value}</li>`
   ));
+
   copiedData += `</ul>
     
           </div>
-
           <div style="display:${assessmentList.length > 0 ? 'block' : 'none'};">
           <h3 style="margin:0px;font-size: 20px;font-weight: 600;color: #000000;font-family: sans-serif;padding-top:10px;">Assessment methods</h3>
           <p style="font-size: 14px;color: #000000;font-family: sans-serif;padding:10px 0px">${companyName ? companyName : '{Org name}'} assessed the accessibility of this site using the following method(s):</p>
@@ -450,6 +450,7 @@ export default function StatementGeneratorReport() {
   assessmentList.map((item, index) => (
     copiedData += `<li style="font-size: 14px;color: #000000;font-family: sans-serif;padding:1px 0px">${item.value}</li>`
   ));
+
   copiedData += `</ul>
       
             </div>
@@ -535,8 +536,8 @@ export default function StatementGeneratorReport() {
 
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data.file_path));
-        setIspath(response.data.file_path)
+        console.log('file_path 1', response.data.file_path);
+        setIspath(response.data.file_path);
         setIsPreloaderOn(false);
         setPreloaderCaption("Loading...");
         setIsGoogleDriveExportOptionClicked(true);
@@ -551,7 +552,6 @@ export default function StatementGeneratorReport() {
 
     setPreloaderCaption("Fetching Data. Please wait...");
     setIsPreloaderOn(true);
-
     fetch(ispath, {
       method: 'GET',
       headers: {
@@ -585,7 +585,8 @@ export default function StatementGeneratorReport() {
 
     const query = "'root' in parents and mimeType='application/vnd.google-apps.folder'";
 
-    const url = "https://www.googleapis.com/drive/v3/files?q=" + `${query} ` + "&key=AIzaSyAqlo6FvJtQl06yUyhboTdAsyAhu62WQNE";
+    const url = "https://www.googleapis.com/drive/v3/files?q=" + `${query} ` + "&key=AIzaSyCP2Fqi2htfhYS04YfmrbkmKu-XAj_QDoY";
+    //const url = "https://www.googleapis.com/drive/v3/files?q=" + `${query}` + "&key=AIzaSyA9F6sretGwfqb1KQYoCo78yf_oz0S1B4o";
 
     fetch(url, requestOptions)
       .then(response => response.json())
@@ -2174,7 +2175,8 @@ export default function StatementGeneratorReport() {
             }}>
               <GoogleLogin
                 //clientId="978719022448-hqtr18jvf6685ilmip2cm18id45o8i02.apps.googleusercontent.com"
-                clientId="471472160602-nfj2c45sdse07b58dtl5gauknohtmvov.apps.googleusercontent.com"
+                //clientId="471472160602-nfj2c45sdse07b58dtl5gauknohtmvov.apps.googleusercontent.com"
+                clientId="283912304677-mrmpvgkfmfk69su5j3nj8p05cv32lnvj.apps.googleusercontent.com"
                 buttonText="Signin"
                 onSuccess={onSuccessResponseFromGoogle}
                 onFailure={onFailureResponseFromGoogle}
